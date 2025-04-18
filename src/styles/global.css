@@ -1,0 +1,9 @@
+@import "tailwindcss";
+/* src/styles/global.css */
+html, body {
+    background-color: black; /* prevent flash of white */
+    color: white;
+    margin: 0;
+    padding: 0;
+  }
+  
