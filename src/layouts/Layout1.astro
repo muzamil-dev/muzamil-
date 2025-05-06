@@ -1,6 +1,7 @@
 ---
 import { ClientRouter } from 'astro:transitions';
-import Sidebar from '../components/sidebar.astro';
+import Header from '../components/header.astro';
+import Footer from '../components/footer.astro';
 ---
 
 <!doctype html>
@@ -11,10 +12,11 @@ import Sidebar from '../components/sidebar.astro';
     <ClientRouter />
     <title><slot name="title" /></title>
   </head>
-  <body class="text-white flex overflow-hidden font-sans">
-    <Sidebar />
-    <main class="md:ml-[33.333%] xl:ml-[25%] w-full overflow-y-scroll h-screen px-4 sm:px-8 py-8">
+  <body class="text-white">
+    <Header />
+    <main class="max-w-4xl mx-auto px-4 py-8">
       <slot />
     </main>
+    <Footer />
   </body>
 </html>
