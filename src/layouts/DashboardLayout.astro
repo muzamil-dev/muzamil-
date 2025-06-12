@@ -1,0 +1,18 @@
+---
+// DashboardLayout.astro
+const { children } = Astro.props;
+import "../styles/global.css";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Muzamil Shamsi</title>
+  </head>
+  <body class="bg-neutral-950 text-white font-sans">
+    <main class="min-h-screen w-full max-w-7xl mx-auto p-6 grid grid-cols-1 md:grid-cols-3 gap-6">
+      <slot />
+    </main>
+  </body>
+</html>

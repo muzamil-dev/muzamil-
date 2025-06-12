@@ -1,123 +1,16 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import "../styles/global.css";
-import { fade } from "astro:transitions";
+import DashboardLayout from "../layouts/DashboardLayout.astro";
+import WelcomeCard from "../components/WelcomeCard.astro";
+import AboutCard from "../components/AboutCard.astro";
+import ContactCard from "../components/ContactCard.astro";
+import TimezoneCard from "../components/TimezoneCard.astro";
+import CurrentProjectsCard from "../components/CurrentProjectsCard.astro";
 ---
-<title>Muzamil Shamsi</title>
-<Layout>
-  <div transition:animate={fade({ duration: "1.0s" })}>
-    <!-- Hero Section -->
-    <section id="hero" class="min-h-screen flex flex-col justify-center items-start px-8 bg-neutral-900 text-white">
-      <p class="text-green-400 text-sm mb-2">Hi, my name is</p>
-      <h1 class="text-5xl sm:text-6xl font-bold mb-4">Muzamil Shamsi</h1>
-      <h2 class="text-4xl sm:text-5xl text-gray-400 font-semibold mb-6">...</h2>
-      <p class="max-w-xl text-gray-400 mb-8">
-        ...
-      </p>
-      <a href="#about" class="text-green-400 border border-green-400 px-6 py-3 rounded hover:bg-green-400 hover:text-black transition">
-        Learn more about me
-      </a>
-    </section>
 
-    <!-- About Section -->
-    <section id="about" class="py-20 px-8 bg-neutral-800 text-white">
-      <div class="max-w-3xl mx-auto">
-        <h2 class="text-3xl font-bold mb-6">About Me</h2>
-        <p class="text-gray-400 mb-4">
-          I code
-        </p>
-        <p class="text-gray-400 mb-4">
-          I'm currently building personal projects and continuing to learn new tools. Outside of tech, I’m into weightlifting and a movie enjoyer.
-        </p>
-        <a
-          href="/resume/Shamsi_resume.pdf"
-          target="_blank"
-          class="inline-block text-green-400 underline underline-offset-2 hover:text-green-300 mt-4"
-        >
-          View Resume
-        </a>
-      </div>
-    </section>
-
-    <!-- Experience Section -->
-    <section id="experience" class="py-20 px-8 bg-neutral-900 text-white">
-      <div class="max-w-3xl mx-auto">
-        <h2 class="text-3xl font-bold mb-6">Experience</h2>
-        <ul class="space-y-4">
-			<!-- Experience 1 -->
-			<li>
-				<h3 class="text-xl font-semibold text-green-400">Toho Water Authority | Billing Intern</h3>
-				<p class="text-gray-400">Optimized billing for 1,600+ accounts weekly, ensuring 100% data accuracy using Utility Exchange software.</p>
-				<p class="text-gray-400">Utilized CIS tools for detailed credit assessments, deposit management, and customer profile updates.</p>
-				<p class="text-gray-400">Assisted in migrating paper-based billing records to a digital system, improving accessibility and security</p>
-			</li>
-			<!-- Experience 2 -->
-			<li>
-				<h3 class="text-xl font-semibold text-green-400">Toho Water Authority | Billing Intern</h3>
-				<p class="text-gray-400">Optimized billing for 1,600+ accounts weekly, ensuring 100% data accuracy using Utility Exchange software.</p>
-				<p class="text-gray-400">Utilized CIS tools for detailed credit assessments, deposit management, and customer profile updates.</p>
-				<p class="text-gray-400">Assisted in migrating paper-based billing records to a digital system, improving accessibility and security</p>
-			</li>
-			<!-- Experience 3 -->
-			<li>
-				<h3 class="text-xl font-semibold text-green-400">Toho Water Authority | Billing Intern</h3>
-				<p class="text-gray-400">Optimized billing for 1,600+ accounts weekly, ensuring 100% data accuracy using Utility Exchange software.</p>
-				<p class="text-gray-400">Utilized CIS tools for detailed credit assessments, deposit management, and customer profile updates.</p>
-				<p class="text-gray-400">Assisted in migrating paper-based billing records to a digital system, improving accessibility and security</p>
-			</li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="py-20 px-8 bg-neutral-800 text-white">
-      <div class="max-w-4xl mx-auto">
-        <h2 class="text-3xl font-bold mb-10">Some Things I’ve Built</h2>
-        <div class="grid gap-12">
-		  <!-- Project 2 -->
-		  <div class="group">
-		  <p class="text-green-400 text-sm">Featured Project</p>
-		  <h3 class="text-2xl font-semibold text-white group-hover:text-green-300 transition">
-			DETECT 
-		  </h3>
-		  <p class="text-gray-400 mt-2">
-			DETECT is a computer vision-based system designed to identify deceptive behavior in real time using nonintrusive eye tracking technology. Built on cognitive science and NLP research, DETECT analyzes micro eye movements—such as gaze shifts, fixations, and saccades—to identify subtle visual cues associated with deception.
-		  </p>
-		  <ul class="flex gap-3 mt-4 text-sm text-gray-500">
-			<li>Astro,js</li>
-			<li>Tailwind</li>
-			<li>Go</li>
-			<li>Docker</li>
-			<li>Digital Ocean</li>
-			<li>PostgresSQL</li>
-		  </ul>
-		  <div class="mt-4 flex gap-4 text-green-400">
-			<a href="https://github.com/bingKegeta/DETECT.js" class="hover:underline" target="_blank">GitHub ↗</a>
-			<a href="https://asdqwe.online/" class="hover:underline" target="_blank">Live ↗</a>
-		  </div>
-		</div>
-
-		<!-- Project 1 -->
-		<div class="group">
-		<h3 class="text-2xl font-semibold text-white group-hover:text-green-300 transition">
-			Personal Portfolio Website
-		</h3>
-		<p class="text-gray-400 mt-2">
-			A portfolio site to showcase my work and experience, built with Astro, Tailwind, and deployed on Vercel.
-		</p>
-		<ul class="flex gap-3 mt-4 text-sm text-gray-500">
-			<li>Astro</li>
-			<li>Tailwind</li>
-			<li>Vercel</li>
-		</ul>
-		<div class="mt-4 flex gap-4 text-green-400">
-			<a href="https://github.com/" class="hover:underline" target="_blank">GitHub ↗</a>
-			<a href="https://your-live-site.com" class="hover:underline" target="_blank">Live ↗</a>
-		</div>
-		</div>
-		<!-- Project 3 -->
-        </div>
-      </div>
-    </section>
-  </div>
-</Layout>
+<DashboardLayout>
+  <WelcomeCard />
+  <AboutCard />
+  <CurrentProjectsCard />
+  <ContactCard />
+  <TimezoneCard />
+</DashboardLayout>

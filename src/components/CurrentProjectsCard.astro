@@ -1,0 +1,25 @@
+---
+import ProjectCard from "./ProjectCard.astro";
+---
+
+<div class="bg-neutral-900 rounded-xl p-6 shadow-md col-span-full">
+  <h2 class="text-2xl font-bold mb-6">Current & Recent Projects</h2>
+  <div class="grid gap-8">
+    <ProjectCard
+      title="DETECT"
+      description="DETECT is a computer vision-based system designed to identify deceptive behavior in real time using nonintrusive eye tracking. It analyzes gaze, fixations, and saccades to detect deception."
+      tech={["Astro.js", "Tailwind", "Go", "Docker", "Digital Ocean", "PostgreSQL"]}
+      github="https://github.com/bingKegeta/DETECT.js"
+      live="https://asdqwe.online/"
+      featured={true}
+    />
+
+    <ProjectCard
+      title="Personal Portfolio Website"
+      description="A portfolio site to showcase my work and experience, built with Astro, Tailwind, and deployed on Vercel."
+      tech={["Astro", "Tailwind", "Vercel"]}
+      github="https://github.com/"
+      live="https://your-live-site.com"
+    />
+  </div>
+</div>

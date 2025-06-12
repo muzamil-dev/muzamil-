@@ -1,0 +1,28 @@
+---
+import { getESTTime, getESTStatus } from "../Utils/time";
+---
+
+<div class="bg-neutral-900 rounded-xl p-6 shadow-md text-center">
+  <h2 class="text-lg font-semibold mb-2">Time zone</h2>
+  <p id="clock" class="text-4xl font-mono text-white tracking-wide mb-2">
+    {getESTTime()} EST
+  </p>
+  <p id="status" class="text-sm font-medium text-gray-400">
+    {getESTStatus()}
+  </p>
+</div>
+
+<script type="module">
+  import { getESTTime, getESTStatus } from "../Utils/time";
+
+  const clock = document.getElementById("clock");
+  const status = document.getElementById("status");
+
+  function updateClock() {
+    if (clock) clock.textContent = getESTTime() + " EST";
+    if (status) status.textContent = getESTStatus();
+  }
+
+  updateClock();
+  setInterval(updateClock, 1000);
+</script>
